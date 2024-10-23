@@ -1,0 +1,18 @@
+# # example
+# version: 3
+# projects:
+#   - dir: week2
+#     terraform_version: 0.13.7
+# workflows:
+#   default:
+#     plan:
+#       steps:
+#         - run: tfenv install ${TERRAFORM_VERSION}
+#         - run: tfenv use ${TERRAFORM_VERSION}
+#         - run: terraform init
+#         - run: terraform plan -out=$PLANOUTPUT --refresh
+#     apply:
+#       steps:
+#         - run: tfenv install ${TERRAFORM_VERSION}
+#         - run: tfenv use ${TERRAFORM_VERSION}
+#         - run: terraform apply $PLANOUTPUT
